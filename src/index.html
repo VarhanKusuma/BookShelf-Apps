@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <div class="banner-deskripsi">
+      <img src="img/buku.png" alt="Book" />
+      <h1>
+        According to the Big Indonesian Dictionary (KBBI), bookshelf or
+        bookshelf is a piece of furniture in the form of a special shelf or
+        cupboard for storing and organising books. and organise books so that
+        they look neat and orderly.
+      </h1>
+    </div>
+    <main>
+      <section class="input_section">
+        <h2>Insert New Book</h2>
+        <form id="inputBook">
+          <div class="input" id="secTitle">
+            <label for="inputBookTitle">Title</label>
+            <input id="inputBookTitle" type="text" required />
+            <small class="error-display" id="errorTitle"
+              >This form must be filled in</small
+            >
+          </div>
+          <div class="input" id="secAuthor">
+            <label for="inputBookAuthor">Author</label>
+            <input id="inputBookAuthor" type="text" required />
+            <small class="error-display" id="errorAuthor"
+              >This form must be filled in</small
+            >
+          </div>
+          <div class="input" id="secYear">
+            <label for="inputBookYear">Years</label>
+            <input id="inputBookYear" type="number" required />
+            <small class="error-display" id="errorYear"
+              >This form must be filled in</small
+            >
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Completed reading</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="button">
+            Put the book on the shelf <span>Not finished reading</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Search for Books (Optional)</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Title</label>
+          <input id="searchBookTitle" type="text" />
+          <button id="searchSubmit" type="submit">Search</button>
+        </form>
+        <div id="searchResult" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Unfinished reading</h2>
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf" id="bookShelfCompleted">
+        <h2>Completed reading</h2>
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="credit">
+        Bookshelf by Muhammad Varhan Kusuma &#169; 2023, Dicoding Academy
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
